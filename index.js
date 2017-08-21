@@ -78,7 +78,7 @@ function drawBall() {
 function drawPaddle() {
   ctx.beginPath();
   ctx.rect(paddleX, canvas.height - paddleHeight * 2, paddleWidth, paddleHeight);
-  ctx.fillStyle = "black";
+  ctx.fillStyle = "#0095DD";
   ctx.fill();
   ctx.closePath();
 }
@@ -204,5 +204,24 @@ function mouseMoveHandler(e) {
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
 document.addEventListener("mousemove", mouseMoveHandler, false);
+function makeGranim() {
+  var granimInstance = new Granim({
+      element: '#canvas-basic',
+      name: 'basic-gradient',
+      direction: 'left-right',
+      opacity: [1, 1],
+      isPausedWhenNotInView: true,
+      states : {
+          "default-state": {
+              gradients: [
+                  ['#AA076B', '#61045F'],
+                  ['#02AAB0', '#00CDAC'],
+                  ['#DA22FF', '#9733EE']
+              ]
+          }
+      }
+  });
+}
 
+makeGranim();
 draw();
