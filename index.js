@@ -66,6 +66,7 @@ function draw() {
   drawPaddle();
   moveBall();
   movePaddle();
+  requestAnimationFrame(draw);
 }
 function drawBall() {
   ctx.beginPath();
@@ -204,4 +205,4 @@ document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
 document.addEventListener("mousemove", mouseMoveHandler, false);
 
-setInterval(draw, 30);
+draw();

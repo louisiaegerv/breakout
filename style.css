@@ -1,5 +1,24 @@
-* { padding: 0; margin: 0; }
+* {
+  padding: 0;
+  margin: 0;
+  font-family: arial;
+}
 
 canvas {
-  background: #eee; display: block; margin: 0 auto; 
+  background: #eee;
+  display: block;
+  margin: 40px auto;
+  box-shadow: 4px 3px 5px rgba(0,0,0,.2);
+  transition: all .5s;
+}
+
+canvas:hover {
+  box-shadow: 4px 3px 5px rgba(0,0,0,.1);
+}
+
+.author {
+  text-align: center;
+}
+a {
+  text-decoration: none;
 }
